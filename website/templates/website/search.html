@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+{% block title %}search{% endblock %}
+{% block head %}
+    <style>
+    line{
+         border-left: solid #000000
+    }
+
+    div#contet{
+        margin: 5px;
+        padding: 10px;
+    }
+
+
+    form{
+        padding: 15px;
+    }
+
+    footer{
+        padding: 2em;
+        text-align: center;
+        background-color: #4e4e4e;
+        color: white;
+    }
+
+    </style>
+{% endblock %}
+{% block body %}
+
+
+
+
+            <div class="container">
+        <div class="form-group pull-right">
+        <input id="search_box" type="text" name="search_box" class="search form-control" placeholder="Search here...">
+            </div>
+            <table class="table table-striped" id="userTbl">
+
+                <tbody>
+                <tr>
+                    <td><a href="statelibraryofqueensland" class="img-link link">
+                        <img src="../../static/icon/statelibraryofqueenslandicon.png" alt="Library"></a></td>
+                    <td><a href="statelibraryofqueensland"
+                           >State Library of Queensland<br><br>
+                            Stanley Place, Cultural Centre, South Brisbane, Queensland 4101
+                    </a></td>
+
+                </tr>
+
+                <tr>
+                    <td><a href="qutgardenspointlibrary" class="img-link link">
+                        <img src="../../static/icon/qutgardenspointlibraryicon.png" alt="Library"></a></td>
+                    <td><a href="qutgardenspointlibrary"
+                           class="img-link link">QUT Gardens Point Library<br><br>
+                            V Block, Gardens Point Campus, 2 George St, Brisbane City QLD 4001
+                    </a></td>
+
+                </tr>
+
+                <tr>
+                    <td><a href="brisbanesquarelibrary" class="img-link link">
+                        <img src="../../static/icon/brisbanesquarelibraryicon.png" alt="Library"></a></td>
+                    <td><a href="brisbanesquarelibrary"
+                           class="img-link link">Brisbane Square Library<br><br>
+                            Brisbane Square, 266 George Street, BRISBANE, QLD 4000
+                    </a></td>
+
+                </tr>
+
+                <tr>
+                    <td><a href="citybotanicgardens" class="img-link link">
+                        <img src="../../static/icon/citybotanicgardensicon.png" alt="Park"></a></td>
+                    <td><a href="citybotanicgardens"
+                           class="img-link link">City Botanic Gardens<br><br>
+                            Alice Street, Brisbane City, Queensland 4000
+                    </a></td>
+
+                </tr>
+
+                 <tr>
+                    <td><a href="kangaroopointcliffspark" class="img-link link">
+                        <img src="../../static/icon/kangaroopointcliffsparkicon.png" alt="Park"></a></td>
+                    <td><a href="kangaroopointcliffspark"
+                           class="img-link link">Kangaroo Point Cliffs Park<br><br>
+                            Kangaroo Point Cliffs, River Terrace, KANGAROO POINT, QLD 4169
+                    </a></td>
+
+                </tr>
+
+                 <tr>
+                    <td><a href="romastreetparkland" class="img-link link">
+                        <img src="../../static/icon/romastreetparklandicon.png" alt="Park"></a></td>
+                    <td><a href="romastreetparkland"
+                           class="img-link link">Roma Street Parkland<br><br>
+                            1 Parkland Boulevard, Brisbane City, Queensland 4000
+                    </a></td>
+
+                </tr>
+
+                 <tr>
+                    <td><a href="storybridge" class="img-link link">
+                        <img src="../../static/icon/storybridgeicon.png" alt="Bridge"></a></td>
+                    <td><a href="storybridge"
+                           class="img-link link">Story Bridge<br><br>
+                            Story Bridge, Bradfield Highway, Kangaroo Point, Queensland 4169
+                    </a></td>
+
+                </tr>
+
+                 <tr>
+                    <td><a href="victoriabridge" class="img-link link">
+                        <img src="../../static/icon/Victoriabridgeicon.png" alt="Bridge"></a></td>
+                    <td><a href="victoriabridge"
+                           class="img-link link">Victoria bridge<br><br>
+                            Victoria Bridge, South Brisbane, Queensland 4101
+                    </a></td>
+
+                </tr>
+
+                 <tr>
+                    <td><a href="kurilpabridge" class="img-link link">
+                        <img src="../../static/icon/kurilpabrdigeicon.png" alt="Bridge"></a></td>
+                    <td><a href="kurilpabridge"
+                           class="img-link link">Kurilpa Bridge<br><br>
+                            Tank Street, Brisbane, Queensland 4000
+                    </a></td>
+
+                </tr>
+
+                <tr>
+                    <td><a href="goodwillbridge" class="img-link link">
+                        <img src="../../static/icon/goodwillbridgeicon.png" alt="Bridge"></a></td>
+                    <td><a href="goodwillbridge"
+                           class="img-link link">Goodwill Bridge<br><br>
+                            Between Brisbane Central Business District, and South Bank, Brisbane City, Queensland 4000
+                    </a></td>
+
+                </tr>
+
+                <tr>
+                    <td><a href="angelospastafactory" class="img-link link">
+                        <img src="../../static/icon/angelospastafactoryicon.png" alt="Factory"></a></td>
+                    <td><a href="angelospastafactory"
+                           class="img-link link">Angelo's Pasta Factory<br><br>
+                            22 Doggett St, Fortitude Valley QLD 4006
+                    </a></td>
+
+                </tr>
+
+                <tr>
+                    <td><a href="noosachocolatefactory" class="img-link link">
+                        <img src="../../static/icon/noosachocolatefactoryicon.png" alt="Factory"></a></td>
+                    <td><a href="noosachocolatefactory"
+                           class="img-link link">Noosa Chocolate Factory<br><br>
+                            144 Adelaide Street, Brisbane, Queensland 4000
+                    </a></td>
+
+                </tr>
+
+                <tr>
+                    <td><a href="theglassfactory" class="img-link link">
+                        <img src="../../static/icon/theglassfactoryicon.png" alt="Factory"></a></td>
+                    <td><a href="theglassfactory"
+                           class="img-link link">The Glass Factory<br><br>
+                            57 Vulture St, West End QLD 4101
+                    </a></td>
+
+                </tr>
+
+                <tr>
+                    <td><a href="queenslandpolicemuseum" class="img-link link">
+                        <img src="../../static/icon/queenslandpolicemuseumicon.png" alt="Museum"></a></td>
+                    <td><a href="queenslandpolicemuseum"
+                           class="img-link link">Queensland Police Museum<br><br>
+                            200 Roma Street, Ground Floor, Queensland Police Headquarters, Brisbane City, Queensland 4000
+                    </a></td>
+
+                </tr>
+
+                <tr>
+                    <td><a href="queenslandmuseumandsciencentre" class="img-link link">
+                        <img src="../../static/icon/queenslandmuseumandsciencentreicon.png" alt="Museum"></a></td>
+                    <td><a href="queenslandmuseumandsciencentre"
+                           class="img-link link">Queensland Museum and Sciencentre<br><br>
+                            Corner Grey Street and Melbourne Street, South Brisbane, Queensland 4101
+                    </a></td>
+
+                </tr>
+
+                <tr>
+                    <td><a href="museumofbrisbane" class="img-link link">
+                        <img src="../../static/icon/museumofbrisbaneicon.png" alt="Museum"></a></td>
+                    <td><a href="museumofbrisbane"
+                           class="img-link link">Museum of Brisbane<br><br>
+                            Level 3, City Hall, Brisbane City, Queensland 4000
+                    </a></td>
+
+                </tr>
+
+
+                </tbody>
+            </table>
+
+
+
+    </div>
+
+
+    <script>
+    $(document).ready(function(){
+        $('.search').on('keyup',function(){
+            var searchTerm = $(this).val().toLowerCase();
+            $('#userTbl tbody tr').each(function(){
+                var lineStr = $(this).text().toLowerCase();
+                if(lineStr.indexOf(searchTerm) === -1){
+                    $(this).hide();
+                }else{
+                    $(this).show();
+                }
+            });
+        });
+    });
+    </script>
+
+
+
+        <footer>Copyright &copy; Wavemaker</footer>
+{% endblock %}

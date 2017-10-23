@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+<h1>Home</h1>
+{% block head %}
+<title>Home</title>
+{% endblock %}
+
+{% block body %}
+<h1>Home</h1>
+<h1>yo</h1>
+
+
+
+{% if user.is_authenticated %}
+logged in
+{% else %}
+logged out
+{% endif %}
+
+{% endblock %}

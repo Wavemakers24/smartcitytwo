@@ -1,0 +1,7 @@
+{% for field in User %}
+    <div class="col-sm-offset-2 col-sm-10">
+        <span class="text-danger small">{{field.errors}}</span>
+    </div>
+    <label class="control-label col-sm-2">{{field}}</label>
+    <div class="col-sm-10">{{field}}</div>
+{% endfor %}

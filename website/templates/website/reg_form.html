@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container">
+    <h1>Register</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if password1 == password2 %}
+            <p>hihihi</p>
+        {% else %}
+            <p>nonono</p>
+            {% endif%}
+        <p>* Password required at least 8 characters with two word type
+            (such as: letters, numbers)</p>
+        <p>* press next step to enter your details</p>
+        <button type="submit">submit</button>
+    </form>
+</div>
+{% endblock %}

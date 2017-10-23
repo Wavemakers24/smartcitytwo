@@ -1,0 +1,102 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <!-- load css file e.g.
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home/CSS/main.css' %}"/>
+    -->
+    <style>
+        header{
+            padding: 7px;
+            border: 0px;
+            outline: none;
+            color: white;
+            background-color: #4e4e4e;
+            /*clear: left;*/
+            text-align: center;
+            text-shadow: none;
+        }
+        nav{
+        padding: 1em;
+        color: black;
+        clear: left;
+        text-align: center;
+        }
+        section{
+            padding: 1em;
+            /*background-color:dimgray;*/
+            clear: left;
+            text-align: center;
+    
+        }
+    
+        article{
+            padding: 1em;
+            color: black;
+            clear: left;
+            text-align: center;
+    
+            overflow-x: auto;
+    
+        }
+        a, a:hover, a:active, a:visited, a:focus {
+            text-decoration:none;
+            color: inherit;
+        }
+        table .absorbing-column {
+            width: 100%;
+        }
+        table td {
+        white-space: nowrap;
+        }
+    </style>
+    
+    </head>
+    <body>
+            <header>
+                    <table width="100%", border="0">
+                    <tr>
+                        <td  align="left">
+                            <a text-decoration="none" href="/website/">
+                                <img src="../../static/logo2.png">
+                            </a>
+                        </td>
+                        <td ><a href="/website/search/" ><font face="Corbel" color="white">Search  </font></a></td>
+                        <td class="absorbing-column"></td>
+                        <td style="color:white;">
+                            {% if user.is_authenticated %}
+                            Welcome, {{user.username }}
+                            {% else %}
+                            Welcome, guest
+                            {% endif %}
+                        </td>
+                        <td style = "white-space:PRE"><font color="black">  <line></line>  </font></td>
+                        <!--<td><a href="#"><font color="white">Login</font></a></td>-->
+                        <td>
+                            {% if user.is_authenticated %}
+                            <!-- <td style = "white-space:PRE"><a href=""><font face="Corbel" size="2" color="black"><b>   </b></font></a></td> -->
+                            <td style = "white-space:PRE"><font color="black">  <line></line>  </font></td>
+                            <td style = "white-space:PRE"><font color="black"></font><a href="/website/profile/" ><font face="Corbel" color="white">Profile  </font></a></td>
+                            <td style = "white-space:PRE"><font color="black">  <line></line>  </font></td>
+                            <td style = "white-space:PRE"><font color="black"></font><a href="/website/logout/" ><font face="Corbel" color="white">Logout  </font></a></td>
+                            {% else %}
+                            <a href="/website/login/" ><font face="Corbel" color="white">Login  </font></a>
+                            <td style = "white-space:PRE"><font color="black">  <line></line>  </font></td>
+                            <td><a href="/website/register/"><font face="Corbel" color="white">   Register</font></a></td>
+                            {% endif %}
+                            
+                        </td>
+                    </tr>
+                    </table>
+                </header>
+    
+    {% block body %}
+    {% endblock %}<br>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </body>
+    </html>
